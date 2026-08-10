@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALEXANDER MATOS // PORTFOLIO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;0,800;0,900;1,700;1,800;1,900&family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Scanline / grain overlay -->
+<div class="fx-scanlines" aria-hidden="true"></div>
+
+<!-- Underwater bubble field (populated by script.js) -->
+<div id="bubble-field" aria-hidden="true"></div>
+
+<!-- Ambient depth vignette -->
+<div class="fx-depth" aria-hidden="true"></div>
+
+<!-- ============ INTRO / TITLE SCREEN ============ -->
+<div id="intro-screen" class="screen">
+  <div class="intro-slashes" aria-hidden="true">
+    <div class="slash slash-1"></div>
+    <div class="slash slash-2"></div>
+    <div class="slash slash-3"></div>
+  </div>
+  <div class="intro-content">
+    <p class="intro-eyebrow">PORTFOLIO SYSTEM // v2.6</p>
+    <h1 class="intro-title">ALEXANDER<br><span>MATOS</span></h1>
+    <p class="intro-role">SOFTWARE DEVELOPER &amp; AI RESEARCHER</p>
+    <button id="intro-continue" class="prompt-btn">
+      <span class="prompt-key">ENTER</span> PRESS TO CONTINUE
+    </button>
+  </div>
+  <p class="intro-footer">© ALEXANDER MATOS — ALL SYSTEMS NOMINAL</p>
+</div>
+
+<!-- ============ MAIN MENU SCREEN ============ -->
+<div id="menu-screen" class="screen hidden">
+  <aside class="menu-hero">
+    <div class="hero-slant" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">STATUS</p>
+      <h2 class="hero-name">ALEXANDER<br>MATOS</h2>
+      <p class="hero-role">Software Developer<br>&amp; AI Researcher</p>
+      <div class="hero-stats">
+        <div class="stat-row">
+          <span class="stat-label">FOCUS</span>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:88%"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">CURIOSITY</span>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:95%"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">BUILD SPEED</span>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:80%"></div></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <nav class="menu-list" aria-label="Main menu">
+    <ul id="menu-items">
+      <li data-target="profile" class="menu-item is-active" tabindex="0">
+        <span class="item-index">01</span>
+        <span class="item-label">PROFILE</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="projects" class="menu-item" tabindex="0">
+        <span class="item-index">02</span>
+        <span class="item-label">PROJECTS</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="skills" class="menu-item" tabindex="0">
+        <span class="item-index">03</span>
+        <span class="item-label">SKILLS</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="experience" class="menu-item" tabindex="0">
+        <span class="item-index">04</span>
+        <span class="item-label">EXPERIENCE</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="contact" class="menu-item" tabindex="0">
+        <span class="item-index">05</span>
+        <span class="item-label">CONTACT</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+    </ul>
+    <p class="menu-hint"><span class="key">↑↓</span> NAVIGATE &nbsp; <span class="key">ENTER</span> SELECT</p>
+  </nav>
+</div>
+
+<!-- ============ CONTENT SCREEN ============ -->
+<div id="content-screen" class="screen hidden">
+  <header class="content-header">
+    <button id="back-btn" class="prompt-btn small">
+      <span class="prompt-key">ESC</span> BACK
+    </button>
+    <div class="content-header-title">
+      <span id="content-index" class="content-index">01</span>
+      <h2 id="content-title" class="content-title">PROFILE</h2>
+    </div>
+  </header>
+
+  <div id="content-body" class="content-body">
+
+    <!-- PROFILE -->
+    <section id="section-profile" class="content-panel">
+      <p class="panel-eyebrow">ARCANA · THE MAGICIAN</p>
+      <h3 class="panel-heading">Turning ideas into systems that ship.</h3>
+      <p class="panel-text">I'm Alexander Matos, a software developer and AI researcher working across the CUNY innovation ecosystem. I build tools that turn raw data into something people can actually act on — from health analytics platforms to AI training pipelines — and I like environments where I'm learning a new stack under real deadlines.</p>
+      <p class="panel-text">Recently that's meant contributing to a personalized wellness platform, helping train AI models for image generation and audio transcription, and shipping changes to a live PHP/SQL codebase during a CUNY fellowship.</p>
+      <div class="panel-tags">
+        <span class="tag">CUNY</span>
+        <span class="tag">AI Research</span>
+        <span class="tag">Full-Stack</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="section-projects" class="content-panel">
+      <p class="panel-eyebrow">QUEST LOG</p>
+      <h3 class="panel-heading">Projects</h3>
+
+      <article class="quest-card">
+        <div class="quest-card-top">
+          <h4 class="quest-title">Biolyze Track</h4>
+          <span class="quest-status complete">COMPLETE</span>
+        </div>
+        <p class="quest-dates">APR 24 2026 — APR 25 2026</p>
+        <p class="quest-desc">BIOLYZE's mission is to transform health data into actionable intelligence — raising awareness of hidden health risks, enabling early detection, and guiding users with personalized routines for long-term wellness and disease prevention.</p>
+        <div class="quest-tags">
+          <span class="tag">Health Data</span>
+          <span class="tag">Personalization</span>
+        </div>
+        <a class="quest-link" href="https://sites.google.com/d/1Cig8b9RaKgW-BkVXsgrgcLlBnyVjyWdr/p/1zx3ZWVyotG9FvsK7TWAvSAyKn0_ICER9/edit" target="_blank" rel="noopener noreferrer">
+          VIEW PROJECT <span aria-hidden="true">→</span>
+        </a>
+      </article>
+
+      <article class="quest-card">
+        <div class="quest-card-top">
+          <h4 class="quest-title">CUNY AI Innovation Hub Website</h4>
+          <span class="quest-status active">IN PROGRESS</span>
+        </div>
+        <p class="quest-dates">AUG 3 2026 — AUG 26 2026</p>
+        <p class="quest-desc">Website for the CUNY AI &amp; Tech Innovation Hub — a free program for CUNY students to build skills in AI, teamwork, leadership, and problem-solving, backed by industry mentors, past winners, and sponsors including the BMCC Tech Equity Project and BMCC CIS Department.</p>
+        <div class="quest-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">SQL</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="section-skills" class="content-panel">
+      <p class="panel-eyebrow">PERSONA COMPENDIUM</p>
+      <h3 class="panel-heading">Skills</h3>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-glyph">&lt;/&gt;</span>
+          <h4 class="skill-name">JavaScript</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph">&lt;H&gt;</span>
+          <h4 class="skill-name">HTML</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph">{ }</span>
+          <h4 class="skill-name">CSS</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph">&lt;?&gt;</span>
+          <h4 class="skill-name">PHP</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph">DB</span>
+          <h4 class="skill-name">SQL</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph">.py</span>
+          <h4 class="skill-name">Python</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="section-experience" class="content-panel">
+      <p class="panel-eyebrow">MISSION RECORD</p>
+      <h3 class="panel-heading">Experience</h3>
+
+      <div class="timeline">
+        <article class="timeline-entry">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">Handshake AI Fellowship</h4>
+            <p class="timeline-desc">Trained AI functions by importing and preparing existing content used to train the model's image generation and audio transcription abilities.</p>
+          </div>
+        </article>
+        <article class="timeline-entry">
+          <div class="timeline-marker" aria-hidden="true"></div>
+          <div class="timeline-body">
+            <h4 class="timeline-title">CUNY AI Innovation Hub Summer Fellowship</h4>
+            <p class="timeline-desc">Learned Git and GitHub workflows, and how to implement and test code changes in PHP and SQL using an XAMPP server — making changes to an existing codebase and watching them go live in real time.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="section-contact" class="content-panel">
+      <p class="panel-eyebrow">LINK ESTABLISHED</p>
+      <h3 class="panel-heading">Contact</h3>
+      <p class="panel-text">Open to opportunities in software development and AI research. Reach out through any of the channels below.</p>
+
+      <div class="contact-list">
+        <a class="contact-row" href="mailto:alex.matos.pena@gmail.com">
+          <span class="contact-index">01</span>
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-value">alex.matos.pena@gmail.com</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="contact-row" href="https://github.com/AMaP1738" target="_blank" rel="noopener noreferrer">
+          <span class="contact-index">02</span>
+          <span class="contact-label">GITHUB</span>
+          <span class="contact-value">github.com/AMaP1738</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/alexander-matos-6a2612245/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-index">03</span>
+          <span class="contact-label">LINKEDIN</span>
+          <span class="contact-value">/in/alexander-matos</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Sinking / ripple transition layer -->
+<div id="wipe" aria-hidden="true">
+  <div class="wipe-ripple"></div>
+  <div class="wipe-veil"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
