@@ -6,44 +6,37 @@
 <title>ALEXANDER MATOS // PORTFOLIO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;0,800;0,900;1,700;1,800;1,900&family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
 
-<!-- Scanline / grain overlay -->
+<!-- Digital grid + scanline overlay -->
+<div id="bg-layer" aria-hidden="true"></div>
+<div class="fx-grid" aria-hidden="true"></div>
 <div class="fx-scanlines" aria-hidden="true"></div>
-
-<!-- Underwater bubble field (populated by script.js) -->
-<div id="bubble-field" aria-hidden="true"></div>
-
-<!-- Ambient depth vignette -->
-<div class="fx-depth" aria-hidden="true"></div>
+<video id="bg-layer" autoplay muted loop playsinline>
+  <source src="assets/videobackground.mp4" type="video/mp4">
+</video>
 
 <!-- ============ INTRO / TITLE SCREEN ============ -->
 <div id="intro-screen" class="screen">
-  <div class="intro-slashes" aria-hidden="true">
-    <div class="slash slash-1"></div>
-    <div class="slash slash-2"></div>
-    <div class="slash slash-3"></div>
-  </div>
   <div class="intro-content">
-    <p class="intro-eyebrow">PORTFOLIO SYSTEM // v2.6</p>
-    <h1 class="intro-title">ALEXANDER<br><span>MATOS</span></h1>
+    <h1 class="intro-title glitch" data-text="ALEXANDER MATOS">ALEXANDER<br><span>MATOS</span></h1>
     <p class="intro-role">SOFTWARE DEVELOPER &amp; AI RESEARCHER</p>
     <button id="intro-continue" class="prompt-btn">
-      <span class="prompt-key">ENTER</span> PRESS TO CONTINUE
+      <span class="prompt-key">ENTER</span> INITIALIZE
     </button>
   </div>
-  <p class="intro-footer">© ALEXANDER MATOS — ALL SYSTEMS NOMINAL</p>
+  <p class="intro-footer">SYSTEM READY // ALL PROCESSES NOMINAL</p>
 </div>
 
 <!-- ============ MAIN MENU SCREEN ============ -->
 <div id="menu-screen" class="screen hidden">
   <aside class="menu-hero">
-    <div class="hero-slant" aria-hidden="true"></div>
     <div class="hero-inner">
-      <p class="hero-eyebrow">STATUS</p>
+      <p class="hero-eyebrow">// STATUS</p>
       <h2 class="hero-name">ALEXANDER<br>MATOS</h2>
       <p class="hero-role">Software Developer<br>&amp; AI Researcher</p>
       <div class="hero-stats">
@@ -111,7 +104,7 @@
 
     <!-- PROFILE -->
     <section id="section-profile" class="content-panel">
-      <p class="panel-eyebrow">ARCANA · THE MAGICIAN</p>
+      <p class="panel-eyebrow">// UNIT DATA</p>
       <h3 class="panel-heading">Turning ideas into systems that ship.</h3>
       <p class="panel-text">I'm Alexander Matos, a software developer and AI researcher working across the CUNY innovation ecosystem. I build tools that turn raw data into something people can actually act on — from health analytics platforms to AI training pipelines — and I like environments where I'm learning a new stack under real deadlines.</p>
       <p class="panel-text">Recently that's meant contributing to a personalized wellness platform, helping train AI models for image generation and audio transcription, and shipping changes to a live PHP/SQL codebase during a CUNY fellowship.</p>
@@ -124,7 +117,7 @@
 
     <!-- PROJECTS -->
     <section id="section-projects" class="content-panel">
-      <p class="panel-eyebrow">QUEST LOG</p>
+      <p class="panel-eyebrow">// MISSION LOG</p>
       <h3 class="panel-heading">Projects</h3>
 
       <article class="quest-card">
@@ -159,12 +152,13 @@
 
     <!-- SKILLS -->
     <section id="section-skills" class="content-panel">
-      <p class="panel-eyebrow">PERSONA COMPENDIUM</p>
+      <p class="panel-eyebrow">// VIRTUALIZATION</p>
       <h3 class="panel-heading">Skills</h3>
       <div class="skill-grid">
         <div class="skill-card">
           <span class="skill-glyph">&lt;/&gt;</span>
-          <h4 class="skill-name">JavaScript</h4>
+          <h4 class="skill-name"></h4>
+          <i class="devicon-javascript-plain"></i>
         </div>
         <div class="skill-card">
           <span class="skill-glyph">&lt;H&gt;</span>
@@ -191,7 +185,7 @@
 
     <!-- EXPERIENCE -->
     <section id="section-experience" class="content-panel">
-      <p class="panel-eyebrow">MISSION RECORD</p>
+      <p class="panel-eyebrow">// RUN HISTORY</p>
       <h3 class="panel-heading">Experience</h3>
 
       <div class="timeline">
@@ -214,7 +208,7 @@
 
     <!-- CONTACT -->
     <section id="section-contact" class="content-panel">
-      <p class="panel-eyebrow">LINK ESTABLISHED</p>
+      <p class="panel-eyebrow">// UPLINK</p>
       <h3 class="panel-heading">Contact</h3>
       <p class="panel-text">Open to opportunities in software development and AI research. Reach out through any of the channels below.</p>
 
@@ -243,10 +237,10 @@
   </div>
 </div>
 
-<!-- Sinking / ripple transition layer -->
+<!-- Digital scan transition layer -->
 <div id="wipe" aria-hidden="true">
-  <div class="wipe-ripple"></div>
   <div class="wipe-veil"></div>
+  <div class="wipe-scan"></div>
 </div>
 
 <script src="script.js"></script>

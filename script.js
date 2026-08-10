@@ -96,8 +96,8 @@
       wipe.classList.add('is-exiting');
       setTimeout(() => {
         wipe.classList.remove('is-exiting');
-      }, 420);
-    }, 380);
+      }, 400);
+    }, 500);
   }
 
   /* ---------------- GLOBAL KEYBOARD NAV ---------------- */
