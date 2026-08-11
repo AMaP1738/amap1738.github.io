@@ -15,6 +15,49 @@
   let activeIndex = 0;
   let onMenu = true; // true = menu screen has keyboard focus, false = content screen
 
+  /* ---------------- BOOT SCREEN ---------------- */
+  (function bootSequence(){
+    const boot = document.getElementById('boot-screen');
+    if(sessionStorage.getItem('bootPlayed')) {
+      boot.classList.add('is-hidden');
+      return;
+    }
+    const linesEl = document.getElementById('boot-lines');
+    const fill = document.getElementById('boot-progress-fill');
+    const pct = document.getElementById('boot-pct');
+    
+    const lines = [
+    'INITIALIZING SYSTEM...',
+    'LOADING ASSETS...',
+    'ESTABLISHING UPLINK...',
+    'RENDER PIPELINE ONLINE',
+    'PORTFOLIO SYSTEM READY'
+    ];
+    let i = 0;
+  function nextLine(){
+    if (i >= lines.length) return finish();
+    const div = document.createElement('div');
+    div.className = 'line' + (i === lines.length - 1 ? ' ok' : '');
+    div.textContent = lines[i];
+    linesEl.appendChild(div);
+    i++;
+    const p = Math.round((i / lines.length) * 100);
+    fill.style.width = p + '%';
+    pct.textContent = p + '%';
+    setTimeout(nextLine, 450);
+  }
+
+  function finish(){
+    setTimeout(() => {
+      boot.classList.add('is-hidden');
+      sessionStorage.setItem('bootPlayed', '1');
+    }, 500);
+  }
+
+  nextLine();
+})();
+
+
   /* ---------------- INTRO -> MENU ---------------- */
   function enterMenu(){
     introScreen.classList.add('hidden');
