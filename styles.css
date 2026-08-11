@@ -2,19 +2,19 @@
    TOKENS — Toonami / Code Lyoko digital HUD, white-grey/black
 =========================================================== */
 :root{
-  --bg:          #f1f2f4;
-  --bg-soft:     #ffffff;
-  --bg-tint:     #dcdfe4;
-  --ink:         #0a0a0c;
-  --ink-dim:     #4c505a;
+  --bg:          #1b1b1b;
+  --bg-soft:     #303030;
+  --bg-tint:     #5f5f5f;
+  --ink:         #ffffff;
+  --ink-dim:     #c7c7c7;
   --accent:      #00c2d6;   /* Lyoko digital cyan */
-  --accent-2:    #ff4a1c;   /* Toonami energy orange-red */
+  --accent-2:    #49ff5f;  
   --line:        rgba(10,10,12,.15);
 
   --f-display: 'Induction', sans-serif;
   --f-menu:    'Induction', sans-serif;
-  --f-body:    'Induction', sans-serif;
-  --f-mono:    'JetBrains Mono', monospace;
+  --f-body:    'Roboto Mono', monospace;
+  --f-mono:    'Roboto Mono', monospace;
 
   --ease-snap: cubic-bezier(.65,0,.15,1);
   --ease-soft: cubic-bezier(.2,.7,.2,1);
@@ -66,7 +66,7 @@ ul{ list-style:none; }
 =========================================================== */
 #intro-screen{
   background:
-    linear-gradient(160deg, rgba(255,255,255,.3) ,0%, rgba(241,242,244,.3) 100%);
+    linear-gradient(160deg, rgba(255,255,255,0) ,0%, rgba(241,242,244,0) 100%);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center; overflow:hidden;
 }
@@ -125,7 +125,7 @@ ul{ list-style:none; }
 .prompt-btn{
   position:relative;
   margin-top:3rem;
-  background:rgba(255,255,255,.7);
+  background:rgba(255,254,255,.3);
   backdrop-filter:blur(6px);
   border:1px solid var(--line);
   color:var(--ink);
@@ -138,7 +138,7 @@ ul{ list-style:none; }
   animation:pulse-glow 2s ease-in-out infinite;
 }
 .prompt-btn:hover, .prompt-btn:focus-visible{
-  background:#fff; border-color:var(--accent);
+  background:rgba(255,254,255,.5); border-color:var(--accent);
 }
 .prompt-btn.small{ margin-top:0; padding:.55rem 1.1rem; font-size:.72rem; animation:none; }
 .prompt-key{
@@ -183,7 +183,7 @@ ul{ list-style:none; }
 #menu-screen{
   display:flex; overflow:hidden;
   background:
-    linear-gradient(160deg, rgba(255,255,255,.3) ,0%, rgba(241,242,244,.3) 100%);
+    linear-gradient(160deg, rgba(255,255,255,0) ,0%, rgba(241,242,244,0) 100%);
 }
 
 .menu-hero{
@@ -259,7 +259,7 @@ ul{ list-style:none; }
 =========================================================== */
 #content-screen{
   background:
-    linear-gradient(160deg, rgba(255,255,255,.3) ,0%, rgba(241,242,244,.3) 100%);
+    linear-gradient(160deg, rgba(255,255,255,0) ,0%, rgba(241,242,244,0) 100%);
   display:flex; flex-direction:column;
 }
 
@@ -288,7 +288,7 @@ ul{ list-style:none; }
 .panel-tags{ display:flex; gap:.6rem; margin-top:1.5rem; flex-wrap:wrap; }
 .tag{
   font-family:var(--f-mono); font-size:.68rem; letter-spacing:.05em; padding:.35rem .7rem;
-  border:1px solid rgba(0,194,214,.4); color:var(--accent); background:rgba(0,194,214,.06);
+  border:1px solid rgba(0,194,214,.4); color:var(--accent);   background:rgba(255,254,255,.5); border-color:var(--accent);
 }
 
 /* ---- Projects ---- */
