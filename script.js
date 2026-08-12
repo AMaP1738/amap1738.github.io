@@ -28,10 +28,9 @@
     
     const lines = [
     'INITIALIZING SYSTEM...',
-    'LOADING ASSETS...',
-    'ESTABLISHING UPLINK...',
-    'RENDER PIPELINE ONLINE',
-    'PORTFOLIO SYSTEM READY'
+    'LOADING...',
+    'SCANNING SYSTEM...',
+    'VIRTUALIZATION READY',
     ];
     let i = 0;
   function nextLine(){
