@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 <link rel="font" type="font/otf" href="fonts/Induction.otf">
+<link rel="preload" href="fonts/JetBrainsMonoNerdFontMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" 
 </head>
 <body>
 
@@ -27,20 +29,16 @@
 <div id="bg-layer" aria-hidden="true"></div>
 <div class="fx-grid" aria-hidden="true"></div>
 <div class="fx-scanlines" aria-hidden="true"></div>
-<video id="bg-layer" autoplay muted loop playsinline>
-  <source src="assets/test2.mp4" type="video/mp4">
-</video>
 
 <!-- ============ INTRO / TITLE SCREEN ============ -->
 <div id="intro-screen" class="screen">
   <div class="intro-content">
-    <h1 class="intro-title glitch" data-text="ALEXANDER MATOS">ALEXANDER<br><span>MATOS</span></h1>
-    <p class="intro-role">SOFTWARE DEVELOPER &amp; AI RESEARCHER</p>
+    <h1 class="intro-title glitch" data-text="ALEXANDER MATOS">ALEXANDER MATOS</h1>
     <button id="intro-continue" class="prompt-btn">
-         INITIALIZE
+         OBSERVE
     </button>
   </div>
-  <p class="intro-footer">SYSTEM READY // ALL PROCESSES NOMINAL</p>
+  <p class="intro-footer">systems operational. |ψ⟩ prepared, awaiting measurement.</p>
 </div>
 
 <!-- ============ MAIN MENU SCREEN ============ -->
@@ -48,12 +46,11 @@
   <div class="menu-panel">
   <aside class="menu-hero">
     <div class="hero-inner">
-      <p class="hero-eyebrow">// STATUS</p>
-      <h2 class="hero-name">ALEXANDER<br>MATOS</h2>
-      <p class="hero-role">Software Developer<br>&amp; AI Researcher</p>
+      <p class="hero-eyebrow">[STATE OF MATTER]</p>
+      <h2 class="hero-name">ALEXANDER MATOS</h2>
       <div class="hero-stats">
         <div class="stat-row">
-          <span class="stat-label">FOCUS</span>
+          <span class="stat-label">COHERENCE</span>
           <div class="stat-bar"><div class="stat-fill" style="--pct:88%"></div></div>
         </div>
         <div class="stat-row">
@@ -61,9 +58,18 @@
           <div class="stat-bar"><div class="stat-fill" style="--pct:95%"></div></div>
         </div>
         <div class="stat-row">
-          <span class="stat-label">BUILD SPEED</span>
+          <span class="stat-label">PERSISTENCE</span>
           <div class="stat-bar"><div class="stat-fill" style="--pct:80%"></div></div>
         </div>
+      </div>
+
+      <!-- terminal readout -->
+      <div class="readout">
+        <p class="readout-rule" aria-hidden="true">------------------------------</p>
+        <p><span class="readout-key">field</span> : photonics / quantum</p>
+        <p><span class="readout-key">status</span> : open to research</p>
+        <p><span class="readout-key">last system check</span> : <time id="sys-clock">—</time></p>
+        <p class="readout-dim">background processes running<span class="readout-dots" aria-hidden="true"></span></p>
       </div>
     </div>
   </aside>
@@ -96,7 +102,7 @@
         <span class="item-cursor" aria-hidden="true">▶</span>
       </li>
     </ul>
-    <p class="menu-hint"><span class="key">↑↓</span> NAVIGATE &nbsp; <span class="key">ENTER</span> SELECT</p>
+    <p class="menu-hint"><span class="key">[↑↓]</span> navigate &nbsp; <span class="key">[enter]</span> select</p>
   </nav>
 </div>
 </div>
@@ -105,7 +111,7 @@
 <div id="content-screen" class="screen hidden">
   <header class="content-header">
     <button id="back-btn" class="prompt-btn small">
-      <span class="prompt-key">ESC</span> BACK
+      <span class="prompt-key">ESC</span> 
     </button>
     <div class="content-header-title">
       <span id="content-index" class="content-index">01</span>
@@ -117,79 +123,71 @@
 
     <!-- PROFILE -->
     <section id="section-profile" class="content-panel">
-      <p class="panel-eyebrow">// UNIT DATA</p>
-      <h3 class="panel-heading">Turning ideas into systems that ship.</h3>
-      <p class="panel-text">I'm Alexander Matos, a software developer and AI researcher working across the CUNY innovation ecosystem. I build tools that turn raw data into something people can actually act on — from health analytics platforms to AI training pipelines — and I like environments where I'm learning a new stack under real deadlines.</p>
-      <p class="panel-text">Recently that's meant contributing to a personalized wellness platform, helping train AI models for image generation and audio transcription, and shipping changes to a live PHP/SQL codebase during a CUNY fellowship.</p>
+      <p class="panel-eyebrow">[INITIAL STATE]</p>
+      <h3 class="panel-heading">From writing code to working with light.</h3>
+      <p class="panel-text">I'm Alexander Matos, and I'm turning my focus to physics — specifically photonics and quantum physics. I'm drawn to the questions at the edge of how light and matter behave, and to the experiments and computation it takes to answer them.</p>
+      <p class="panel-text">I'm coming at it from a background in software and AI research across the CUNY innovation ecosystem: contributing to a personalized wellness platform, helping train AI models for image generation and audio transcription, and shipping changes to a live PHP/SQL codebase. That experience with code, data and fast learning under real deadlines is what I'm bringing into the lab.</p>
       <div class="panel-tags">
         <span class="tag">CUNY</span>
-        <span class="tag">AI Research</span>
-        <span class="tag">Full-Stack</span>
+        <span class="tag">Photonics</span>
+        <span class="tag">Quantum Physics</span>
+        <span class="tag">Software</span>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="section-projects" class="content-panel">
-      <p class="panel-eyebrow">// MISSION LOG</p>
+      <p class="panel-eyebrow">[EXPERIMENT LOG]</p>
       <h3 class="panel-heading">Projects</h3>
 
-      <article class="quest-card">
-        <div class="quest-card-top">
-          <h4 class="quest-title">Biolyze Track</h4>
-          <span class="quest-status complete">COMPLETE</span>
-        </div>
-        <p class="quest-dates">APR 24 2026 — APR 25 2026</p>
-        <p class="quest-desc">BIOLYZE's mission is to transform health data into actionable intelligence — raising awareness of hidden health risks, enabling early detection, and guiding users with personalized routines for long-term wellness and disease prevention.</p>
-        <div class="quest-tags">
-          <span class="tag">Health Data</span>
-          <span class="tag">Personalization</span>
-        </div>
-        <a class="quest-link" href="https://sites.google.com/d/1Cig8b9RaKgW-BkVXsgrgcLlBnyVjyWdr/p/1zx3ZWVyotG9FvsK7TWAvSAyKn0_ICER9/edit" target="_blank" rel="noopener noreferrer">
-          VIEW PROJECT <span aria-hidden="true">→</span>
-        </a>
-      </article>
-
-      <article class="quest-card">
-        <div class="quest-card-top">
-          <h4 class="quest-title">CUNY AI Innovation Hub Website</h4>
-          <span class="quest-status active">IN PROGRESS</span>
-        </div>
-        <p class="quest-dates">AUG 3 2026 — AUG 26 2026</p>
-        <p class="quest-desc">Website for the CUNY AI &amp; Tech Innovation Hub — a free program for CUNY students to build skills in AI, teamwork, leadership, and problem-solving, backed by industry mentors, past winners, and sponsors including the BMCC Tech Equity Project and BMCC CIS Department.</p>
-        <div class="quest-tags">
-          <span class="tag">PHP</span>
-          <span class="tag">SQL</span>
-        </div>
-      </article>
+      <!-- Cards are built by script.js from projects.json — edit that file to add or change projects -->
+      <div id="project-list"></div>
     </section>
 
     <!-- SKILLS -->
     <section id="section-skills" class="content-panel">
-      <p class="panel-eyebrow">// VIRTUALIZATION</p>
-      <h3 class="panel-heading">Skills</h3>
+      <p class="panel-eyebrow">[FIELDS OF STUDY]</p>
+      <h3 class="panel-heading">Focus Areas</h3>
+      <div class="skill-grid skill-grid--focus">
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--nf" aria-hidden="true">&#xf1484;</span><!-- nf-md-laser_pointer -->
+          <h4 class="skill-name">Photonics</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--nf" aria-hidden="true">&#xee99;</span><!-- nf-fa-atom -->
+          <h4 class="skill-name">Quantum Physics</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--nf" aria-hidden="true">&#xf0018;</span><!-- nf-md-orbit -->
+          <h4 class="skill-name">Physics</h4>
+        </div>
+      </div>
+
+      <p class="panel-eyebrow">[INSTRUMENTATION]</p>
+      <h3 class="panel-heading">Tools</h3>
       <div class="skill-grid">
         <div class="skill-card">
           <span class="skill-glyph"><i class="devicon-javascript-plain"></i></span>
           <h4 class="skill-name">JavaScript</h4>
         </div>
         <div class="skill-card">
-          <span class="skill-glyph">&lt;H&gt;</span>
+          <span class="skill-glyph"><i class="devicon-html5-plain"></i></span>
           <h4 class="skill-name">HTML</h4>
         </div>
         <div class="skill-card">
-          <span class="skill-glyph">{ }</span>
+          <span class="skill-glyph"><i class="devicon-css3-plain"></i></span>
           <h4 class="skill-name">CSS</h4>
         </div>
         <div class="skill-card">
-          <span class="skill-glyph">&lt;?&gt;</span>
+          <span class="skill-glyph skill-glyph--wide"><i class="devicon-php-plain"></i></span>
           <h4 class="skill-name">PHP</h4>
         </div>
         <div class="skill-card">
-          <span class="skill-glyph">DB</span>
+          <span class="skill-glyph"><i class="devicon-azuresqldatabase-plain"></i></span>
           <h4 class="skill-name">SQL</h4>
         </div>
         <div class="skill-card">
-          <span class="skill-glyph">.py</span>
+          <span class="skill-glyph"><i class="devicon-python-plain"></i></span>
           <h4 class="skill-name">Python</h4>
         </div>
       </div>
@@ -197,32 +195,18 @@
 
     <!-- EXPERIENCE -->
     <section id="section-experience" class="content-panel">
-      <p class="panel-eyebrow">// RUN HISTORY</p>
+      <p class="panel-eyebrow">[TRAJECTORY]</p>
       <h3 class="panel-heading">Experience</h3>
 
-      <div class="timeline">
-        <article class="timeline-entry">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-body">
-            <h4 class="timeline-title">Handshake AI Fellowship</h4>
-            <p class="timeline-desc">Trained AI functions by importing and preparing existing content used to train the model's image generation and audio transcription abilities.</p>
-          </div>
-        </article>
-        <article class="timeline-entry">
-          <div class="timeline-marker" aria-hidden="true"></div>
-          <div class="timeline-body">
-            <h4 class="timeline-title">CUNY AI Innovation Hub Summer Fellowship</h4>
-            <p class="timeline-desc">Learned Git and GitHub workflows, and how to implement and test code changes in PHP and SQL using an XAMPP server — making changes to an existing codebase and watching them go live in real time.</p>
-          </div>
-        </article>
-      </div>
+      <!-- Entries are built by script.js from experience.json — edit that file to add or change experience -->
+      <div id="experience-list"></div>
     </section>
 
     <!-- CONTACT -->
     <section id="section-contact" class="content-panel">
-      <p class="panel-eyebrow">// UPLINK</p>
+      <p class="panel-eyebrow">[SIGNAL CHANNEL]</p>
       <h3 class="panel-heading">Contact</h3>
-      <p class="panel-text">Open to opportunities in software development and AI research. Reach out through any of the channels below.</p>
+      <p class="panel-text">Open to research opportunities in photonics and quantum physics, and to software roles that support scientific work. Reach out through any of the channels below.</p>
 
       <div class="contact-list">
         <a class="contact-row" href="mailto:alex.matos.pena@gmail.com">
@@ -249,7 +233,7 @@
   </div>
 </div>
 
-<!-- Digital scan transition layer -->
+<!-- Light-sweep transition layer -->
 <div id="wipe" aria-hidden="true">
   <div class="wipe-veil"></div>
   <div class="wipe-scan"></div>
