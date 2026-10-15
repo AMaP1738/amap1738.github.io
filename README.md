@@ -1,2 +1,2 @@
-# Persona-3-Portfolio
-A persona 3 style portfolio (HTML,CSS,JS)
+# Terminal-Style Portfolio
+A terminal style portfolio (HTML,CSS,JS)
