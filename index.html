@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALEXANDER MATOS // PORTFOLIO</title>
+<link rel="preload" href="fonts/JetBrainsMonoNerdFontMono-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<!-- Devicon pinned to an exact version; integrity hash makes the browser reject any altered copy -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css" integrity="sha384-6iv3tXABd3c9DYulXujJl8n22ahn/12f45MomxoPv6jBX4LBE4gNJjfkx5mAKIqR" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- BOOT SCREEN -->
+
+<div id="boot-screen">
+  <div class="boot-lines" id="boot-lines"></div>
+  <div class="boot-progress">
+    <div class="boot-progress-fill" id="boot-progress-fill"></div>
+  </div>
+  <p class="boot-pct" id="boot-pct">0%</p>
+</div>
+
+<!-- Digital grid + scanline overlay -->
+<div id="bg-layer" aria-hidden="true"></div>
+<div class="fx-grid" aria-hidden="true"></div>
+<div class="fx-scanlines" aria-hidden="true"></div>
+
+<!-- ============ INTRO / TITLE SCREEN ============ -->
+<div id="intro-screen" class="screen">
+  <div class="intro-content">
+    <h1 class="intro-title glitch" data-text="ALEXANDER MATOS">ALEXANDER MATOS</h1>
+    <button id="intro-continue" class="prompt-btn">
+         OBSERVE
+    </button>
+  </div>
+  <p class="intro-footer">systems operational. |ψ⟩ prepared, awaiting measurement.</p>
+</div>
+
+<!-- ============ MAIN MENU SCREEN ============ -->
+<div id="menu-screen" class="screen hidden">
+  <div class="menu-panel">
+  <aside class="menu-hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">[STATE OF MATTER]</p>
+      <h2 class="hero-name">ALEXANDER MATOS</h2>
+      <div class="hero-stats">
+        <div class="stat-row">
+          <span class="stat-label">COHERENCE</span>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:88%"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">CURIOSITY</span>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:95%"></div></div>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">PERSISTENCE</span>
+          <div class="stat-bar"><div class="stat-fill" style="--pct:80%"></div></div>
+        </div>
+      </div>
+
+      <!-- terminal readout -->
+      <div class="readout">
+        <p class="readout-rule" aria-hidden="true">------------------------------</p>
+        <p><span class="readout-key">field</span> : photonics / quantum</p>
+        <p><span class="readout-key">status</span> : open to research</p>
+        <p><span class="readout-key">last system check</span> : <time id="sys-clock">—</time></p>
+        <p class="readout-dim">background processes running<span class="readout-dots" aria-hidden="true"></span></p>
+      </div>
+    </div>
+  </aside>
+
+  <nav class="menu-list" aria-label="Main menu">
+    <ul id="menu-items">
+      <li data-target="profile" class="menu-item is-active" tabindex="0">
+        <span class="item-index">01</span>
+        <span class="item-label">PROFILE</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="projects" class="menu-item" tabindex="0">
+        <span class="item-index">02</span>
+        <span class="item-label">PROJECTS</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="skills" class="menu-item" tabindex="0">
+        <span class="item-index">03</span>
+        <span class="item-label">SKILLS</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="experience" class="menu-item" tabindex="0">
+        <span class="item-index">04</span>
+        <span class="item-label">EXPERIENCE</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+      <li data-target="contact" class="menu-item" tabindex="0">
+        <span class="item-index">05</span>
+        <span class="item-label">CONTACT</span>
+        <span class="item-cursor" aria-hidden="true">▶</span>
+      </li>
+    </ul>
+    <p class="menu-hint"><span class="key">[↑↓]</span> navigate &nbsp; <span class="key">[enter]</span> select</p>
+  </nav>
+</div>
+</div>
+
+<!-- ============ CONTENT SCREEN ============ -->
+<div id="content-screen" class="screen hidden">
+  <header class="content-header">
+    <button id="back-btn" class="prompt-btn small">
+      <span class="prompt-key">ESC</span> 
+    </button>
+    <div class="content-header-title">
+      <span id="content-index" class="content-index">01</span>
+      <h2 id="content-title" class="content-title">PROFILE</h2>
+    </div>
+  </header>
+
+  <div id="content-body" class="content-body">
+
+    <!-- PROFILE -->
+    <section id="section-profile" class="content-panel">
+      <p class="panel-eyebrow">[INITIAL STATE]</p>
+      <h3 class="panel-heading">From writing code to working with light.</h3>
+      <p class="panel-text">I'm Alexander Matos, and I'm turning my focus to physics — specifically photonics and quantum physics. I'm drawn to the questions at the edge of how light and matter behave, and to the experiments and computation it takes to answer them.</p>
+      <p class="panel-text">I'm coming at it from a background in software and AI research across the CUNY innovation ecosystem: contributing to a personalized wellness platform, helping train AI models for image generation and audio transcription, and shipping changes to a live PHP/SQL codebase. That experience with code, data and fast learning under real deadlines is what I'm bringing into the lab.</p>
+      <div class="panel-tags">
+        <span class="tag">CUNY</span>
+        <span class="tag">Photonics</span>
+        <span class="tag">Quantum Physics</span>
+        <span class="tag">Software</span>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="section-projects" class="content-panel">
+      <p class="panel-eyebrow">[EXPERIMENT LOG]</p>
+      <h3 class="panel-heading">Projects</h3>
+
+      <!-- Cards are built by script.js from projects.json — edit that file to add or change projects -->
+      <div id="project-list"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="section-skills" class="content-panel">
+      <p class="panel-eyebrow">[FIELDS OF STUDY]</p>
+      <h3 class="panel-heading">Focus Areas</h3>
+      <div class="skill-grid skill-grid--focus">
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--nf" aria-hidden="true">&#xf1484;</span><!-- nf-md-laser_pointer -->
+          <h4 class="skill-name">Photonics</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--nf" aria-hidden="true">&#xee99;</span><!-- nf-fa-atom -->
+          <h4 class="skill-name">Quantum Physics</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--nf" aria-hidden="true">&#xf0018;</span><!-- nf-md-orbit -->
+          <h4 class="skill-name">Physics</h4>
+        </div>
+      </div>
+
+      <p class="panel-eyebrow">[INSTRUMENTATION]</p>
+      <h3 class="panel-heading">Tools</h3>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-glyph"><i class="devicon-javascript-plain"></i></span>
+          <h4 class="skill-name">JavaScript</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph"><i class="devicon-html5-plain"></i></span>
+          <h4 class="skill-name">HTML</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph"><i class="devicon-css3-plain"></i></span>
+          <h4 class="skill-name">CSS</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph skill-glyph--wide"><i class="devicon-php-plain"></i></span>
+          <h4 class="skill-name">PHP</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph"><i class="devicon-azuresqldatabase-plain"></i></span>
+          <h4 class="skill-name">SQL</h4>
+        </div>
+        <div class="skill-card">
+          <span class="skill-glyph"><i class="devicon-python-plain"></i></span>
+          <h4 class="skill-name">Python</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="section-experience" class="content-panel">
+      <p class="panel-eyebrow">[TRAJECTORY]</p>
+      <h3 class="panel-heading">Experience</h3>
+
+      <!-- Entries are built by script.js from experience.json — edit that file to add or change experience -->
+      <div id="experience-list"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="section-contact" class="content-panel">
+      <p class="panel-eyebrow">[SIGNAL CHANNEL]</p>
+      <h3 class="panel-heading">Contact</h3>
+      <p class="panel-text">Open to research opportunities in photonics and quantum physics, and to software roles that support scientific work. Reach out through any of the channels below.</p>
+
+      <div class="contact-list">
+        <a class="contact-row" href="mailto:alex.matos.pena@gmail.com">
+          <span class="contact-index">01</span>
+          <span class="contact-label">EMAIL</span>
+          <span class="contact-value">alex.matos.pena@gmail.com</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="contact-row" href="https://github.com/AMaP1738" target="_blank" rel="noopener noreferrer">
+          <span class="contact-index">02</span>
+          <span class="contact-label">GITHUB</span>
+          <span class="contact-value">github.com/AMaP1738</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/alexander-matos-6a2612245/" target="_blank" rel="noopener noreferrer">
+          <span class="contact-index">03</span>
+          <span class="contact-label">LINKEDIN</span>
+          <span class="contact-value">/in/alexander-matos</span>
+          <span class="contact-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Light-sweep transition layer -->
+<div id="wipe" aria-hidden="true">
+  <div class="wipe-veil"></div>
+  <div class="wipe-scan"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

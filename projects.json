@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Biolyze Track",
+    "status": "complete",
+    "dates": "APR 24 2026 — APR 25 2026",
+    "description": "BIOLYZE's mission is to transform health data into actionable intelligence — raising awareness of hidden health risks, enabling early detection, and guiding users with personalized routines for long-term wellness and disease prevention.",
+    "tags": ["Health Data", "Personalization"],
+    "link": "https://sites.google.com/view/perfexailab/home"
+  },
+  {
+    "title": "CUNY AI Innovation Hub Website",
+    "status": "complete",
+    "dates": "AUG 3 2026 — AUG 26 2026",
+    "description": "Website for the CUNY AI & Tech Innovation Hub — a free program for CUNY students to build skills in AI, teamwork, leadership, and problem-solving, backed by industry mentors, past winners, and sponsors including the BMCC Tech Equity Project and BMCC CIS Department.",
+    "tags": ["PHP", "SQL"],
+    "link": "https://challenge.aitechhub.tech/"
+  }
+]
