@@ -1,5 +1,5 @@
 /* ===========================================================
-   TOKENS — light terminal HUD, photonics / quantum theme, 2ynthetic palette
+   TOKENS — light terminal HUD, photonics / quantum theme
 =========================================================== */
 @font-face {
   font-family: 'JetBrains Nerd Font Mono';
@@ -12,7 +12,7 @@
   --bg:          #6a6d76;
   --bg-soft:     #303030;
   --bg-tint:     #5f5f5f;
-  /* palette after 2ynthetic.systems — slate ground, white type, lavender accents */
+  /* palette — slate ground, white type, lavender accents */
   --slate:       #6a6d76;   /* their slate (#848790), one shade deeper so text stays readable */
   --ink:         #ffffff;
   --ink-dim:     #f0f0f4;
