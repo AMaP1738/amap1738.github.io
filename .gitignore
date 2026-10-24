@@ -1,5 +1,2 @@
 # macOS folder metadata
 .DS_Store
-
-# local editor / Claude Code settings
-.claude/
